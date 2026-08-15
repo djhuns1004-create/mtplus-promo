@@ -3,52 +3,28 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-
-    <!-- 검색결과 제목 -->
     <title>먹튀플러스 | 공식보증업체·먹튀검증 커뮤니티</title>
 
-    <!-- 검색결과 설명 -->
     <meta name="description"
           content="먹튀플러스 공식 안내 페이지입니다. 먹튀플러스 공식보증업체 정보와 먹튀검증 커뮤니티, 최신 정보 및 공식 텔레그램을 확인하세요.">
 
-    <!-- 검색 허용 -->
     <meta name="robots"
           content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 
-    <!-- 대표 주소 -->
-    <link rel="canonical"
-          href="https://mtplus.site/">
+    <link rel="canonical" href="https://mtplus.site/">
 
-    <!-- SNS / 링크 공유용 -->
-    <meta property="og:type"
-          content="website">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="먹튀플러스">
+    <meta property="og:title" content="먹튀플러스 | 공식보증업체·먹튀검증 커뮤니티">
+    <meta property="og:description" content="먹튀플러스 공식보증업체와 먹튀검증 커뮤니티 정보를 확인하세요.">
+    <meta property="og:url" content="https://mtplus.site/">
 
-    <meta property="og:site_name"
-          content="먹튀플러스">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="먹튀플러스 | 공식보증업체·먹튀검증 커뮤니티">
+    <meta name="twitter:description" content="먹튀플러스 공식보증업체 및 먹튀검증 커뮤니티 안내 페이지입니다.">
 
-    <meta property="og:title"
-          content="먹튀플러스 | 공식보증업체·먹튀검증 커뮤니티">
-
-    <meta property="og:description"
-          content="먹튀플러스 공식보증업체와 먹튀검증 커뮤니티 정보를 확인하세요.">
-
-    <meta property="og:url"
-          content="https://mtplus.site/">
-
-    <!-- 트위터/X 공유용 -->
-    <meta name="twitter:card"
-          content="summary">
-
-    <meta name="twitter:title"
-          content="먹튀플러스 | 공식보증업체·먹튀검증 커뮤니티">
-
-    <meta name="twitter:description"
-          content="먹튀플러스 공식보증업체 및 먹튀검증 커뮤니티 안내 페이지입니다.">
-
-    <!-- 구조화 데이터 -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -61,6 +37,7 @@
     </script>
 
     <style>
+
         * {
             box-sizing: border-box;
         }
@@ -74,6 +51,8 @@
             background: #0b0c0f;
             color: #ffffff;
             font-family: Arial, "Noto Sans KR", sans-serif;
+            -webkit-font-smoothing: antialiased;
+            word-break: keep-all;
         }
 
         a {
@@ -92,29 +71,23 @@
             margin: 0 auto;
         }
 
-        /* =========================
-           HEADER
-        ========================= */
+        /* HEADER */
 
         header {
             position: sticky;
             top: 0;
             z-index: 1000;
-
-            background: rgba(11, 12, 15, 0.94);
-
+            background: rgba(11, 12, 15, 0.93);
             border-bottom: 1px solid #202228;
-
-            backdrop-filter: blur(12px);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
         }
 
         .header-inner {
             min-height: 76px;
-
             display: flex;
             align-items: center;
             justify-content: space-between;
-
             gap: 20px;
         }
 
@@ -122,105 +95,112 @@
             font-size: 25px;
             font-weight: 900;
             letter-spacing: -1.5px;
-
             color: #ffffff;
+            transition:
+                opacity 0.2s ease,
+                transform 0.2s ease;
         }
 
         .logo-text span {
             color: #9188ff;
         }
 
+        .logo-text:hover {
+            opacity: 0.88;
+            transform: translateY(-1px);
+        }
+
         .header-actions {
             display: flex;
             align-items: center;
-
             gap: 12px;
         }
 
         .telegram-link {
             color: #a8abb5;
-
             font-size: 13px;
             font-weight: 700;
-
-            transition: 0.2s;
+            transition:
+                color 0.2s ease,
+                transform 0.2s ease;
         }
 
         .telegram-link:hover {
             color: #ffffff;
+            transform: translateY(-1px);
+        }
+
+        /* BUTTON */
+
+        .button,
+        .community-button {
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            user-select: none;
+            -webkit-tap-highlight-color: transparent;
+            transition:
+                transform 0.18s ease,
+                box-shadow 0.18s ease,
+                background 0.18s ease,
+                border-color 0.18s ease,
+                opacity 0.18s ease;
         }
 
         .community-button {
             padding: 12px 18px;
-
             background: #ffffff;
             color: #111111;
-
             border-radius: 9px;
-
             font-size: 13px;
             font-weight: 900;
-
-            transition: 0.2s;
         }
 
         .community-button:hover {
             transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(255,255,255,0.12);
         }
 
-        /* =========================
-           HERO
-        ========================= */
+        .community-button:active {
+            transform: translateY(0) scale(0.97);
+        }
+
+        /* HERO */
 
         .hero {
             position: relative;
-
             overflow: hidden;
-
             padding: 105px 0 90px;
-
             text-align: center;
         }
 
         .hero::before {
             content: "";
-
             position: absolute;
-
             width: 500px;
             height: 500px;
-
             top: -120px;
             left: 50%;
-
             transform: translateX(-50%);
-
             border-radius: 50%;
-
             background: rgba(115, 94, 255, 0.18);
-
             filter: blur(100px);
-
             pointer-events: none;
         }
 
         .hero-content {
             position: relative;
             z-index: 2;
-
             max-width: 850px;
-
             margin: 0 auto;
         }
 
         .hero h1 {
             margin: 0;
-
             font-size: clamp(42px, 7vw, 76px);
-
             line-height: 1.08;
-
             letter-spacing: -4px;
+            word-break: keep-all;
         }
 
         .hero h1 span {
@@ -229,218 +209,212 @@
 
         .hero p {
             max-width: 700px;
-
             margin: 26px auto 0;
-
             color: #9da1ac;
-
             font-size: 16px;
-
             line-height: 1.9;
+            word-break: keep-all;
         }
 
         .hero-buttons {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-
             gap: 12px;
-
             margin-top: 35px;
         }
 
         .button {
             min-height: 54px;
-
             display: inline-flex;
-
             align-items: center;
             justify-content: center;
-
             padding: 0 25px;
-
             border-radius: 10px;
-
             font-size: 14px;
             font-weight: 900;
-
-            transition: 0.2s;
-        }
-
-        .button:hover {
-            transform: translateY(-2px);
         }
 
         .button-main {
             background: #ffffff;
             color: #111111;
+            box-shadow: 0 5px 20px rgba(255,255,255,0.05);
+        }
+
+        .button-main:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(255,255,255,0.13);
         }
 
         .button-dark {
             background: #17191f;
-
             border: 1px solid #2a2d35;
-
             color: #ffffff;
         }
 
         .button-dark:hover {
-            border-color: #454956;
+            transform: translateY(-3px);
+            background: #1d2027;
+            border-color: #505462;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.3);
         }
 
-        /* =========================
-           소개 텍스트
-        ========================= */
+        .button:active {
+            transform: scale(0.97);
+        }
+
+        /* RIPPLE */
+
+        .ripple-effect {
+            position: absolute;
+            border-radius: 50%;
+            transform: scale(0);
+            background: rgba(255,255,255,0.28);
+            pointer-events: none;
+            animation: ripple-animation 0.55s ease-out;
+        }
+
+        @keyframes ripple-animation {
+            to {
+                transform: scale(4);
+                opacity: 0;
+            }
+        }
+
+        /* INTRO */
 
         .intro {
             padding: 0 0 90px;
         }
 
         .intro-box {
+            max-width: 980px;
+            margin: 0 auto;
             padding: 38px 40px;
-
             background: #111318;
-
             border: 1px solid #22252d;
-
             border-radius: 16px;
+            text-align: center;
         }
 
         .intro-box h2 {
             margin: 0 0 15px;
-
             font-size: 28px;
-
             letter-spacing: -1.5px;
+            word-break: keep-all;
         }
 
         .intro-box p {
-            margin: 0;
-
+            max-width: 820px;
+            margin: 0 auto;
             color: #969aa5;
-
             font-size: 15px;
-
             line-height: 1.9;
+            word-break: keep-all;
         }
 
-        /* =========================
-           공식보증업체
-        ========================= */
+        /* PARTNERS */
 
         .partners {
             padding: 90px 0 110px;
-
             background: #0e0f13;
-
             border-top: 1px solid #202228;
             border-bottom: 1px solid #202228;
         }
 
         .section-heading {
             text-align: center;
-
             margin-bottom: 45px;
         }
 
         .section-heading h2 {
             margin: 0;
-
             font-size: clamp(30px, 5vw, 45px);
-
             letter-spacing: -2px;
+            word-break: keep-all;
         }
 
         .section-heading p {
+            max-width: 620px;
+            margin: 14px auto 0;
             color: #858a95;
-
-            margin: 14px 0 0;
-
             font-size: 14px;
-
             line-height: 1.8;
+            word-break: keep-all;
         }
 
         .partner-grid {
             display: grid;
-
-            grid-template-columns: repeat(3, 1fr);
-
+            grid-template-columns: repeat(3, minmax(0, 1fr));
             gap: 16px;
         }
 
         .partner-card {
+            position: relative;
             display: block;
-
+            min-width: 0;
             overflow: hidden;
-
             background: #15171c;
-
             border: 1px solid #252830;
-
             border-radius: 14px;
-
-            transition:
-                transform 0.25s ease,
-                border-color 0.25s ease,
-                box-shadow 0.25s ease;
-
             cursor: pointer;
+            -webkit-tap-highlight-color: transparent;
+            transition:
+                transform 0.22s ease,
+                border-color 0.22s ease,
+                box-shadow 0.22s ease,
+                opacity 0.22s ease;
         }
 
         .partner-card:hover {
-            transform: translateY(-4px);
-
+            transform: translateY(-5px);
             border-color: #555a68;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.34);
+        }
 
-            box-shadow:
-                0 14px 35px rgba(0, 0, 0, 0.32);
+        .partner-card:active {
+            transform: translateY(-1px) scale(0.975);
         }
 
         .partner-card img {
             width: 100%;
             height: auto;
-
-            display: block;
-
-            transition: transform 0.25s ease;
+            transition:
+                transform 0.3s ease,
+                filter 0.3s ease;
         }
 
         .partner-card:hover img {
-            transform: scale(1.015);
+            transform: scale(1.025);
+            filter: brightness(1.05);
         }
 
-        /* =========================
-           추가 설명
-        ========================= */
+        /* SEO CONTENT */
 
         .seo-content {
+            max-width: 900px;
+            margin: 0 auto;
             padding: 100px 0 0;
+            text-align: center;
         }
 
         .seo-content h2 {
             margin: 0 0 20px;
-
             font-size: 34px;
-
             letter-spacing: -2px;
+            word-break: keep-all;
         }
 
         .seo-content p {
-            max-width: 850px;
-
-            margin: 0;
-
+            max-width: 780px;
+            margin: 0 auto;
             color: #9297a2;
-
             font-size: 15px;
-
             line-height: 1.95;
+            word-break: keep-all;
         }
 
-        /* =========================
-           MAIN COMMUNITY
-        ========================= */
+        /* COMMUNITY */
 
         .main-community {
             padding: 110px 0;
@@ -448,80 +422,58 @@
 
         .community-box {
             position: relative;
-
             overflow: hidden;
-
             padding: 70px 55px;
-
             background:
                 linear-gradient(
                     135deg,
                     #171923,
                     #26243f
                 );
-
             border: 1px solid #303243;
-
             border-radius: 20px;
         }
 
         .community-box::after {
             content: "";
-
             position: absolute;
-
             width: 330px;
             height: 330px;
-
             right: -100px;
             bottom: -150px;
-
             border-radius: 50%;
-
-            background:
-                rgba(126, 108, 255, 0.25);
-
+            background: rgba(126, 108, 255, 0.25);
             filter: blur(65px);
-
             pointer-events: none;
         }
 
         .community-content {
             position: relative;
-
             z-index: 2;
-
             max-width: 700px;
         }
 
         .community-box h2 {
             margin: 0;
-
-            font-size:
-                clamp(32px, 5vw, 48px);
-
+            font-size: clamp(32px, 5vw, 48px);
             line-height: 1.2;
-
             letter-spacing: -2px;
+            word-break: keep-all;
         }
 
         .community-box p {
-            color: #a1a5b1;
-
             max-width: 620px;
-
-            line-height: 1.9;
-
             margin: 18px 0 0;
+            color: #a1a5b1;
+            line-height: 1.9;
+            word-break: keep-all;
         }
 
         .community-box .hero-buttons {
             justify-content: flex-start;
         }
 
-        /* =========================
-           TELEGRAM
-        ========================= */
+        /* TELEGRAM */
 
         .telegram-section {
             padding: 0 0 110px;
@@ -529,89 +481,73 @@
 
         .telegram-box {
             display: flex;
-
             align-items: center;
-
             justify-content: space-between;
-
             gap: 30px;
-
             padding: 36px 40px;
-
             background: #111318;
-
             border: 1px solid #23262e;
-
             border-radius: 16px;
         }
 
         .telegram-box h3 {
             margin: 0 0 7px;
-
             font-size: 22px;
+            word-break: keep-all;
         }
 
         .telegram-box p {
             margin: 0;
-
             color: #858a95;
-
             font-size: 14px;
+            line-height: 1.7;
+            word-break: keep-all;
         }
 
-        /* =========================
-           FOOTER
-        ========================= */
+        /* FOOTER */
 
         footer {
             padding: 38px 0;
-
             border-top: 1px solid #202228;
-
             color: #696e78;
-
             font-size: 12px;
         }
 
         .footer-inner {
             display: flex;
-
             align-items: center;
-
             justify-content: space-between;
-
             gap: 20px;
         }
 
         .footer-links {
             display: flex;
-
             gap: 18px;
         }
 
         .footer-links a {
-            transition: 0.2s;
+            transition:
+                color 0.2s ease,
+                transform 0.2s ease;
         }
 
         .footer-links a:hover {
             color: #ffffff;
+            transform: translateY(-1px);
         }
 
-        /* =========================
-           TABLET
-        ========================= */
+        /* TABLET */
 
         @media (max-width: 950px) {
 
             .partner-grid {
-                grid-template-columns:
-                    repeat(2, 1fr);
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 14px;
             }
+
         }
 
-        /* =========================
-           MOBILE
-        ========================= */
+        /* MOBILE */
 
         @media (max-width: 760px) {
 
@@ -620,11 +556,11 @@
             }
 
             .header-inner {
-                min-height: 70px;
+                min-height: 68px;
             }
 
             .logo-text {
-                font-size: 21px;
+                font-size: 20px;
             }
 
             .telegram-link {
@@ -633,120 +569,239 @@
 
             .community-button {
                 padding: 10px 13px;
-
                 font-size: 12px;
             }
 
             .hero {
-                padding: 80px 0 70px;
+                padding: 72px 0 60px;
+            }
+
+            .hero-content {
+                max-width: 520px;
             }
 
             .hero h1 {
-                font-size: 42px;
-
+                max-width: 360px;
+                margin: 0 auto;
+                font-size: clamp(34px, 10vw, 42px);
+                line-height: 1.16;
                 letter-spacing: -2px;
             }
 
             .hero p {
+                max-width: 360px;
+                margin-top: 22px;
                 font-size: 14px;
-
                 line-height: 1.8;
-            }
-
-            .hero p br {
-                display: none;
+                text-align: center;
             }
 
             .hero-buttons {
+                max-width: 360px;
+                margin: 30px auto 0;
                 display: grid;
-
                 grid-template-columns: 1fr;
+                gap: 10px;
             }
 
             .button {
                 width: 100%;
+                min-height: 52px;
+                font-size: 13px;
             }
 
             .intro {
-                padding-bottom: 70px;
+                padding-bottom: 62px;
             }
 
             .intro-box {
-                padding: 30px 25px;
+                max-width: 420px;
+                padding: 28px 22px;
+                border-radius: 13px;
+                text-align: center;
             }
 
             .intro-box h2 {
-                font-size: 24px;
+                max-width: 300px;
+                margin: 0 auto 14px;
+                font-size: 23px;
+                line-height: 1.35;
+            }
+
+            .intro-box p {
+                max-width: 330px;
+                font-size: 14px;
+                line-height: 1.85;
+                text-align: center;
             }
 
             .partners {
-                padding: 70px 0 80px;
+                padding: 65px 0 75px;
             }
 
             .section-heading {
-                margin-bottom: 32px;
+                max-width: 380px;
+                margin: 0 auto 30px;
+            }
+
+            .section-heading h2 {
+                max-width: 320px;
+                margin: 0 auto;
+                font-size: 29px;
+                line-height: 1.3;
+            }
+
+            .section-heading p {
+                max-width: 300px;
+                margin-top: 12px;
+                font-size: 13px;
+                line-height: 1.7;
             }
 
             .partner-grid {
-                grid-template-columns: 1fr;
-
-                gap: 12px;
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 9px;
             }
 
-            .partner-card:hover {
-                transform: none;
-            }
-
-            .partner-card:hover img {
-                transform: none;
+            .partner-card {
+                border-radius: 9px;
             }
 
             .seo-content {
-                padding-top: 70px;
+                max-width: 420px;
+                padding-top: 62px;
             }
 
             .seo-content h2 {
-                font-size: 28px;
+                max-width: 320px;
+                margin: 0 auto 18px;
+                font-size: 27px;
+                line-height: 1.35;
+            }
+
+            .seo-content p {
+                max-width: 340px;
+                font-size: 14px;
+                line-height: 1.85;
+                text-align: center;
             }
 
             .main-community {
-                padding: 75px 0;
+                padding: 68px 0;
             }
 
             .community-box {
-                padding: 48px 26px;
+                max-width: 460px;
+                margin: 0 auto;
+                padding: 42px 24px;
+                border-radius: 16px;
+                text-align: center;
+            }
+
+            .community-content {
+                max-width: 360px;
+                margin: 0 auto;
+            }
+
+            .community-box h2 {
+                max-width: 320px;
+                margin: 0 auto;
+                font-size: 32px;
+                line-height: 1.3;
+            }
+
+            .community-box p {
+                max-width: 330px;
+                margin: 16px auto 0;
+                font-size: 14px;
+                line-height: 1.8;
+                text-align: center;
             }
 
             .community-box .hero-buttons {
+                max-width: 340px;
+                margin: 28px auto 0;
                 display: grid;
             }
 
             .telegram-section {
-                padding-bottom: 75px;
+                padding-bottom: 68px;
             }
 
             .telegram-box {
+                max-width: 460px;
+                margin: 0 auto;
                 display: block;
+                padding: 28px 22px;
+                text-align: center;
+            }
 
-                padding: 30px 25px;
+            .telegram-box h3 {
+                max-width: 300px;
+                margin: 0 auto 8px;
+                font-size: 21px;
+                line-height: 1.4;
+            }
+
+            .telegram-box p {
+                max-width: 320px;
+                margin: 0 auto;
+                font-size: 13px;
+                line-height: 1.75;
             }
 
             .telegram-box .button {
-                margin-top: 22px;
+                max-width: 340px;
+                margin: 22px auto 0;
             }
 
             .footer-inner {
                 display: block;
-
                 text-align: center;
             }
 
             .footer-links {
                 justify-content: center;
-
                 margin-top: 14px;
             }
+
         }
+
+        @media (max-width: 380px) {
+
+            .container {
+                width: 94%;
+            }
+
+            .partner-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 7px;
+            }
+
+            .hero h1 {
+                font-size: 34px;
+            }
+
+            .hero p,
+            .intro-box p,
+            .seo-content p,
+            .community-box p {
+                max-width: 300px;
+            }
+
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+
+            *,
+            *::before,
+            *::after {
+                transition: none !important;
+                animation: none !important;
+            }
+
+        }
+
     </style>
 </head>
 
@@ -784,7 +839,7 @@
                 href="https://mtplss.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="community-button"
+                class="community-button ripple"
             >
                 커뮤니티 입장
             </a>
@@ -799,413 +854,320 @@
 <main>
 
 
-    <!-- 메인 제목 -->
+<section class="hero">
 
-    <section class="hero">
+    <div class="container hero-content">
 
-        <div class="container hero-content">
+        <h1>
+            먹튀검증 커뮤니티<br>
+            <span>먹튀플러스</span>
+        </h1>
 
-            <h1>
-                먹튀검증 커뮤니티<br>
-                <span>먹튀플러스</span>
-            </h1>
 
+        <p>
+            먹튀플러스 공식 홍보 페이지입니다.
+            공식보증업체 정보와 먹튀검증 관련 정보,
+            커뮤니티 소식을 한곳에서 확인하세요.
+        </p>
+
+
+        <div class="hero-buttons">
+
+            <a
+                href="https://mtplss.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="button button-main ripple"
+            >
+                먹튀플러스 바로가기 →
+            </a>
+
+
+            <a
+                href="https://t.me/mtplus24"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="button button-dark ripple"
+            >
+                공식 텔레그램 문의
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="intro">
+
+    <div class="container">
+
+        <div class="intro-box">
+
+            <h2>
+                먹튀플러스 공식 안내
+            </h2>
 
             <p>
-                먹튀플러스 공식 홍보 페이지입니다.
-                공식보증업체 정보와 먹튀검증 관련 정보,
-                커뮤니티 소식을 한곳에서 확인하세요.
+                먹튀플러스는 공식보증업체 정보와
+                다양한 커뮤니티 콘텐츠를 확인할 수 있는
+                먹튀검증 커뮤니티입니다.
+                아래 공식보증업체 배너를 통해 관련 정보를 확인할 수 있으며,
+                더 자세한 내용은 먹튀플러스 메인 커뮤니티에서 확인할 수 있습니다.
             </p>
 
+        </div>
 
-            <div class="hero-buttons">
+    </div>
 
-                <a
-                    href="https://mtplss.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="button button-main"
-                >
-                    먹튀플러스 바로가기 →
-                </a>
+</section>
 
 
-                <a
-                    href="https://t.me/mtplus24"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="button button-dark"
-                >
-                    공식 텔레그램 문의
-                </a>
+<section class="partners">
 
-            </div>
+    <div class="container">
+
+        <div class="section-heading">
+
+            <h2>
+                먹튀플러스 공식보증업체
+            </h2>
+
+            <p>
+                먹튀플러스 공식보증업체 정보를 확인하세요.
+                배너를 클릭하면 공식보증업체 페이지로 이동합니다.
+            </p>
 
         </div>
 
-    </section>
 
+        <div class="partner-grid">
 
-    <!-- 페이지 설명 -->
+            <a class="partner-card ripple"
+               href="https://mtplss.com/posts/%EB%B3%B4%EC%A6%9D%EC%97%85%EC%B2%B4"
+               target="_blank"
+               rel="noopener noreferrer">
+                <img src="https://mtplss.com/upload/e3189644c8134c44af9748596dd19e0d.webp"
+                     alt="먹튀플러스 공식보증업체 배너 1"
+                     loading="lazy">
+            </a>
 
-    <section class="intro">
+            <a class="partner-card ripple"
+               href="https://mtplss.com/posts/%EB%B3%B4%EC%A6%9D%EC%97%85%EC%B2%B4"
+               target="_blank"
+               rel="noopener noreferrer">
+                <img src="https://mtplss.com/upload/63ce46a498ff4400aca7e5643ab64e92.webp"
+                     alt="먹튀플러스 공식보증업체 배너 2"
+                     loading="lazy">
+            </a>
 
-        <div class="container">
+            <a class="partner-card ripple"
+               href="https://mtplss.com/posts/%EB%B3%B4%EC%A6%9D%EC%97%85%EC%B2%B4"
+               target="_blank"
+               rel="noopener noreferrer">
+                <img src="https://mtplss.com/upload/0d057e0f26074ec388d107e7f894efa4.webp"
+                     alt="먹튀플러스 공식보증업체 배너 3"
+                     loading="lazy">
+            </a>
 
-            <div class="intro-box">
+            <a class="partner-card ripple"
+               href="https://mtplss.com/posts/%EB%B3%B4%EC%A6%9D%EC%97%85%EC%B2%B4"
+               target="_blank"
+               rel="noopener noreferrer">
+                <img src="https://mtplss.com/upload/11f0f1e7c31649eb90989daa41a0ec3f.webp"
+                     alt="먹튀플러스 공식보증업체 배너 4"
+                     loading="lazy">
+            </a>
 
-                <h2>
-                    먹튀플러스 공식 안내
-                </h2>
+            <a class="partner-card ripple"
+               href="https://mtplss.com/posts/%EB%B3%B4%EC%A6%9D%EC%97%85%EC%B2%B4"
+               target="_blank"
+               rel="noopener noreferrer">
+                <img src="https://mtplss.com/upload/4e910eeec45648c59e1fff87e8b9c51c.webp"
+                     alt="먹튀플러스 공식보증업체 배너 5"
+                     loading="lazy">
+            </a>
 
-                <p>
-                    먹튀플러스는 공식보증업체 정보와
-                    다양한 커뮤니티 콘텐츠를 확인할 수 있는
-                    먹튀검증 커뮤니티입니다.
-                    아래 공식보증업체 배너를 통해
-                    관련 정보를 확인할 수 있으며,
-                    더 자세한 내용은 먹튀플러스 메인 커뮤니티에서
-                    확인할 수 있습니다.
-                </p>
+            <a class="partner-card ripple"
+               href="https://mtplss.com/posts/%EB%B3%B4%EC%A6%9D%EC%97%85%EC%B2%B4"
+               target="_blank"
+               rel="noopener noreferrer">
+                <img src="https://mtplss.com/upload/a870c7c3f802418f81147f50133cd44b.webp"
+                     alt="먹튀플러스 공식보증업체 배너 6"
+                     loading="lazy">
+            </a>
 
-            </div>
+            <a class="partner-card ripple"
+               href="https://mtplss.com/posts/%EB%B3%B4%EC%A6%9D%EC%97%85%EC%B2%B4"
+               target="_blank"
+               rel="noopener noreferrer">
+                <img src="https://mtplss.com/upload/0c8bc9d9e5dd4821b635629854cc5b8f.webp"
+                     alt="먹튀플러스 공식보증업체 배너 7"
+                     loading="lazy">
+            </a>
+
+            <a class="partner-card ripple"
+               href="https://mtplss.com/posts/%EB%B3%B4%EC%A6%9D%EC%97%85%EC%B2%B4"
+               target="_blank"
+               rel="noopener noreferrer">
+                <img src="https://mtplss.com/upload/93f141a94a0042548fee9190bfe66686.webp"
+                     alt="먹튀플러스 공식보증업체 배너 8"
+                     loading="lazy">
+            </a>
+
+            <a class="partner-card ripple"
+               href="https://mtplss.com/posts/%EB%B3%B4%EC%A6%9D%EC%97%85%EC%B2%B4"
+               target="_blank"
+               rel="noopener noreferrer">
+                <img src="https://mtplss.com/upload/3d6f5cc728e742dda0c6d2bc5feb492d.webp"
+                     alt="먹튀플러스 공식보증업체 배너 9"
+                     loading="lazy">
+            </a>
+
+            <a class="partner-card ripple"
+               href="https://mtplss.com/posts/%EB%B3%B4%EC%A6%9D%EC%97%85%EC%B2%B4"
+               target="_blank"
+               rel="noopener noreferrer">
+                <img src="https://mtplss.com/upload/a8f464f852ef496e92b6f3b56f327f99.webp"
+                     alt="먹튀플러스 공식보증업체 배너 10"
+                     loading="lazy">
+            </a>
+
+            <a class="partner-card ripple"
+               href="https://mtplss.com/posts/%EB%B3%B4%EC%A6%9D%EC%97%85%EC%B2%B4"
+               target="_blank"
+               rel="noopener noreferrer">
+                <img src="https://mtplss.com/upload/2e954eabbd184c439abadb08dc4bdfbb.webp"
+                     alt="먹튀플러스 공식보증업체 배너 11"
+                     loading="lazy">
+            </a>
+
+            <a class="partner-card ripple"
+               href="https://mtplss.com/posts/%EB%B3%B4%EC%A6%9D%EC%97%85%EC%B2%B4"
+               target="_blank"
+               rel="noopener noreferrer">
+                <img src="https://mtplss.com/upload/0cb8a3de0c5747c7aa43225ad4b2795c.webp"
+                     alt="먹튀플러스 공식보증업체 배너 12"
+                     loading="lazy">
+            </a>
+
+            <a class="partner-card ripple"
+               href="https://mtplss.com/posts/%EB%B3%B4%EC%A6%9D%EC%97%85%EC%B2%B4"
+               target="_blank"
+               rel="noopener noreferrer">
+                <img src="https://mtplss.com/upload/25593d67a040448b895f7aef67bc6081.webp"
+                     alt="먹튀플러스 공식보증업체 배너 13"
+                     loading="lazy">
+            </a>
+
+            <a class="partner-card ripple"
+               href="https://mtplss.com/posts/%EB%B3%B4%EC%A6%9D%EC%97%85%EC%B2%B4"
+               target="_blank"
+               rel="noopener noreferrer">
+                <img src="https://mtplss.com/upload/ac2e84e97c4643bda254959fea67ec46.webp"
+                     alt="먹튀플러스 공식보증업체 배너 14"
+                     loading="lazy">
+            </a>
+
+            <a class="partner-card ripple"
+               href="https://mtplss.com/posts/%EB%B3%B4%EC%A6%9D%EC%97%85%EC%B2%B4"
+               target="_blank"
+               rel="noopener noreferrer">
+                <img src="https://mtplss.com/upload/3aca1109f59c4e07b258983e3ce76ed1.webp"
+                     alt="먹튀플러스 공식보증업체 배너 15"
+                     loading="lazy">
+            </a>
+
+            <a class="partner-card ripple"
+               href="https://mtplss.com/posts/%EB%B3%B4%EC%A6%9D%EC%97%85%EC%B2%B4"
+               target="_blank"
+               rel="noopener noreferrer">
+                <img src="https://mtplss.com/upload/3dc27488842a4909bd1cfe8ab09dfd91.webp"
+                     alt="먹튀플러스 공식보증업체 배너 16"
+                     loading="lazy">
+            </a>
+
+            <a class="partner-card ripple"
+               href="https://mtplss.com/posts/%EB%B3%B4%EC%A6%9D%EC%97%85%EC%B2%B4"
+               target="_blank"
+               rel="noopener noreferrer">
+                <img src="https://mtplss.com/upload/0bd91f864cbc4d29b65ce5b609c8e00e.webp"
+                     alt="먹튀플러스 공식보증업체 배너 17"
+                     loading="lazy">
+            </a>
+
+            <a class="partner-card ripple"
+               href="https://mtplss.com/posts/%EB%B3%B4%EC%A6%9D%EC%97%85%EC%B2%B4"
+               target="_blank"
+               rel="noopener noreferrer">
+                <img src="https://mtplss.com/upload/6886dfd450544f97bdec297586f7d69c.webp"
+                     alt="먹튀플러스 공식보증업체 배너 18"
+                     loading="lazy">
+            </a>
+
+            <a class="partner-card ripple"
+               href="https://mtplss.com/posts/%EB%B3%B4%EC%A6%9D%EC%97%85%EC%B2%B4"
+               target="_blank"
+               rel="noopener noreferrer">
+                <img src="https://mtplss.com/upload/8fab50eb6adb4321831fd4cdacf8d033.webp"
+                     alt="먹튀플러스 공식보증업체 배너 19"
+                     loading="lazy">
+            </a>
 
         </div>
 
-    </section>
 
-
-    <!-- 공식보증업체 -->
-
-    <section class="partners">
-
-        <div class="container">
-
-            <div class="section-heading">
-
-                <h2>
-                    먹튀플러스 공식보증업체
-                </h2>
-
-                <p>
-                    먹튀플러스 공식보증업체 정보를 확인하세요.
-                    배너를 클릭하면 공식보증업체 페이지로 이동합니다.
-                </p>
-
-            </div>
-
-
-            <div class="partner-grid">
-
-
-                <a class="partner-card"
-                   href="https://mtplss.com/posts/%EB%B3%B4%EC%A6%9D%EC%97%85%EC%B2%B4"
-                   target="_blank"
-                   rel="noopener noreferrer">
-
-                    <img
-                        src="https://mtplss.com/upload/e3189644c8134c44af9748596dd19e0d.webp"
-                        alt="먹튀플러스 공식보증업체 배너 1"
-                        loading="lazy">
-
-                </a>
-
-
-                <a class="partner-card"
-                   href="https://mtplss.com/posts/%EB%B3%B4%EC%A6%9D%EC%97%85%EC%B2%B4"
-                   target="_blank"
-                   rel="noopener noreferrer">
-
-                    <img
-                        src="https://mtplss.com/upload/63ce46a498ff4400aca7e5643ab64e92.webp"
-                        alt="먹튀플러스 공식보증업체 배너 2"
-                        loading="lazy">
-
-                </a>
-
-
-                <a class="partner-card"
-                   href="https://mtplss.com/posts/%EB%B3%B4%EC%A6%9D%EC%97%85%EC%B2%B4"
-                   target="_blank"
-                   rel="noopener noreferrer">
-
-                    <img
-                        src="https://mtplss.com/upload/0d057e0f26074ec388d107e7f894efa4.webp"
-                        alt="먹튀플러스 공식보증업체 배너 3"
-                        loading="lazy">
-
-                </a>
-
-
-                <a class="partner-card"
-                   href="https://mtplss.com/posts/%EB%B3%B4%EC%A6%9D%EC%97%85%EC%B2%B4"
-                   target="_blank"
-                   rel="noopener noreferrer">
-
-                    <img
-                        src="https://mtplss.com/upload/11f0f1e7c31649eb90989daa41a0ec3f.webp"
-                        alt="먹튀플러스 공식보증업체 배너 4"
-                        loading="lazy">
-
-                </a>
-
-
-                <a class="partner-card"
-                   href="https://mtplss.com/posts/%EB%B3%B4%EC%A6%9D%EC%97%85%EC%B2%B4"
-                   target="_blank"
-                   rel="noopener noreferrer">
-
-                    <img
-                        src="https://mtplss.com/upload/4e910eeec45648c59e1fff87e8b9c51c.webp"
-                        alt="먹튀플러스 공식보증업체 배너 5"
-                        loading="lazy">
-
-                </a>
-
-
-                <a class="partner-card"
-                   href="https://mtplss.com/posts/%EB%B3%B4%EC%A6%9D%EC%97%85%EC%B2%B4"
-                   target="_blank"
-                   rel="noopener noreferrer">
-
-                    <img
-                        src="https://mtplss.com/upload/a870c7c3f802418f81147f50133cd44b.webp"
-                        alt="먹튀플러스 공식보증업체 배너 6"
-                        loading="lazy">
-
-                </a>
-
-
-                <a class="partner-card"
-                   href="https://mtplss.com/posts/%EB%B3%B4%EC%A6%9D%EC%97%85%EC%B2%B4"
-                   target="_blank"
-                   rel="noopener noreferrer">
-
-                    <img
-                        src="https://mtplss.com/upload/0c8bc9d9e5dd4821b635629854cc5b8f.webp"
-                        alt="먹튀플러스 공식보증업체 배너 7"
-                        loading="lazy">
-
-                </a>
-
-
-                <a class="partner-card"
-                   href="https://mtplss.com/posts/%EB%B3%B4%EC%A6%9D%EC%97%85%EC%B2%B4"
-                   target="_blank"
-                   rel="noopener noreferrer">
-
-                    <img
-                        src="https://mtplss.com/upload/93f141a94a0042548fee9190bfe66686.webp"
-                        alt="먹튀플러스 공식보증업체 배너 8"
-                        loading="lazy">
-
-                </a>
-
-
-                <a class="partner-card"
-                   href="https://mtplss.com/posts/%EB%B3%B4%EC%A6%9D%EC%97%85%EC%B2%B4"
-                   target="_blank"
-                   rel="noopener noreferrer">
-
-                    <img
-                        src="https://mtplss.com/upload/3d6f5cc728e742dda0c6d2bc5feb492d.webp"
-                        alt="먹튀플러스 공식보증업체 배너 9"
-                        loading="lazy">
-
-                </a>
-
-
-                <a class="partner-card"
-                   href="https://mtplss.com/posts/%EB%B3%B4%EC%A6%9D%EC%97%85%EC%B2%B4"
-                   target="_blank"
-                   rel="noopener noreferrer">
-
-                    <img
-                        src="https://mtplss.com/upload/a8f464f852ef496e92b6f3b56f327f99.webp"
-                        alt="먹튀플러스 공식보증업체 배너 10"
-                        loading="lazy">
-
-                </a>
-
-
-                <a class="partner-card"
-                   href="https://mtplss.com/posts/%EB%B3%B4%EC%A6%9D%EC%97%85%EC%B2%B4"
-                   target="_blank"
-                   rel="noopener noreferrer">
-
-                    <img
-                        src="https://mtplss.com/upload/2e954eabbd184c439abadb08dc4bdfbb.webp"
-                        alt="먹튀플러스 공식보증업체 배너 11"
-                        loading="lazy">
-
-                </a>
-
-
-                <a class="partner-card"
-                   href="https://mtplss.com/posts/%EB%B3%B4%EC%A6%9D%EC%97%85%EC%B2%B4"
-                   target="_blank"
-                   rel="noopener noreferrer">
-
-                    <img
-                        src="https://mtplss.com/upload/0cb8a3de0c5747c7aa43225ad4b2795c.webp"
-                        alt="먹튀플러스 공식보증업체 배너 12"
-                        loading="lazy">
-
-                </a>
-
-
-                <a class="partner-card"
-                   href="https://mtplss.com/posts/%EB%B3%B4%EC%A6%9D%EC%97%85%EC%B2%B4"
-                   target="_blank"
-                   rel="noopener noreferrer">
-
-                    <img
-                        src="https://mtplss.com/upload/25593d67a040448b895f7aef67bc6081.webp"
-                        alt="먹튀플러스 공식보증업체 배너 13"
-                        loading="lazy">
-
-                </a>
-
-
-                <a class="partner-card"
-                   href="https://mtplss.com/posts/%EB%B3%B4%EC%A6%9D%EC%97%85%EC%B2%B4"
-                   target="_blank"
-                   rel="noopener noreferrer">
-
-                    <img
-                        src="https://mtplss.com/upload/ac2e84e97c4643bda254959fea67ec46.webp"
-                        alt="먹튀플러스 공식보증업체 배너 14"
-                        loading="lazy">
-
-                </a>
-
-
-                <a class="partner-card"
-                   href="https://mtplss.com/posts/%EB%B3%B4%EC%A6%9D%EC%97%85%EC%B2%B4"
-                   target="_blank"
-                   rel="noopener noreferrer">
-
-                    <img
-                        src="https://mtplss.com/upload/3aca1109f59c4e07b258983e3ce76ed1.webp"
-                        alt="먹튀플러스 공식보증업체 배너 15"
-                        loading="lazy">
-
-                </a>
-
-
-                <a class="partner-card"
-                   href="https://mtplss.com/posts/%EB%B3%B4%EC%A6%9D%EC%97%85%EC%B2%B4"
-                   target="_blank"
-                   rel="noopener noreferrer">
-
-                    <img
-                        src="https://mtplss.com/upload/3dc27488842a4909bd1cfe8ab09dfd91.webp"
-                        alt="먹튀플러스 공식보증업체 배너 16"
-                        loading="lazy">
-
-                </a>
-
-
-                <a class="partner-card"
-                   href="https://mtplss.com/posts/%EB%B3%B4%EC%A6%9D%EC%97%85%EC%B2%B4"
-                   target="_blank"
-                   rel="noopener noreferrer">
-
-                    <img
-                        src="https://mtplss.com/upload/0bd91f864cbc4d29b65ce5b609c8e00e.webp"
-                        alt="먹튀플러스 공식보증업체 배너 17"
-                        loading="lazy">
-
-                </a>
-
-
-                <a class="partner-card"
-                   href="https://mtplss.com/posts/%EB%B3%B4%EC%A6%9D%EC%97%85%EC%B2%B4"
-                   target="_blank"
-                   rel="noopener noreferrer">
-
-                    <img
-                        src="https://mtplss.com/upload/6886dfd450544f97bdec297586f7d69c.webp"
-                        alt="먹튀플러스 공식보증업체 배너 18"
-                        loading="lazy">
-
-                </a>
-
-
-                <a class="partner-card"
-                   href="https://mtplss.com/posts/%EB%B3%B4%EC%A6%9D%EC%97%85%EC%B2%B4"
-                   target="_blank"
-                   rel="noopener noreferrer">
-
-                    <img
-                        src="https://mtplss.com/upload/8fab50eb6adb4321831fd4cdacf8d033.webp"
-                        alt="먹튀플러스 공식보증업체 배너 19"
-                        loading="lazy">
-
-                </a>
-
-            </div>
-
-
-            <!-- SEO용 실제 설명 -->
-
-            <div class="seo-content">
-
-                <h2>
-                    먹튀플러스 공식보증업체 안내
-                </h2>
-
-                <p>
-                    먹튀플러스에서는 공식보증업체 관련 정보를
-                    확인할 수 있습니다.
-                    이 페이지는 먹튀플러스 공식 커뮤니티와
-                    공식보증업체 페이지로 빠르게 이동할 수 있도록
-                    구성된 안내 페이지입니다.
-                    각 배너를 선택하면 먹튀플러스 공식보증업체
-                    페이지에서 자세한 내용을 확인할 수 있습니다.
-                </p>
-
-            </div>
+        <div class="seo-content">
+
+            <h2>
+                먹튀플러스 공식보증업체 안내
+            </h2>
+
+            <p>
+                먹튀플러스에서는 공식보증업체 관련 정보를 확인할 수 있습니다.
+                이 페이지는 먹튀플러스 공식 커뮤니티와 공식보증업체 페이지로
+                빠르게 이동할 수 있도록 구성된 안내 페이지입니다.
+                각 배너를 선택하면 먹튀플러스 공식보증업체 페이지에서
+                자세한 내용을 확인할 수 있습니다.
+            </p>
 
         </div>
 
-    </section>
+    </div>
+
+</section>
 
 
-    <!-- 메인 커뮤니티 -->
+<section class="main-community">
 
-    <section class="main-community">
+    <div class="container">
 
-        <div class="container">
+        <div class="community-box">
 
-            <div class="community-box">
+            <div class="community-content">
 
-                <div class="community-content">
+                <h2>
+                    먹튀플러스<br>
+                    메인 커뮤니티
+                </h2>
 
-                    <h2>
-                        먹튀플러스<br>
-                        메인 커뮤니티
-                    </h2>
+                <p>
+                    먹튀검증 정보와 공식보증업체 정보,
+                    새로운 소식 및 다양한 콘텐츠는
+                    먹튀플러스 메인 커뮤니티에서 확인하세요.
+                </p>
 
-                    <p>
-                        먹튀검증 정보와 공식보증업체 정보,
-                        새로운 소식 및 다양한 콘텐츠는
-                        먹튀플러스 메인 커뮤니티에서 확인하세요.
-                    </p>
+                <div class="hero-buttons">
 
-
-                    <div class="hero-buttons">
-
-                        <a
-                            href="https://mtplss.com/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="button button-main"
-                        >
-                            먹튀플러스 커뮤니티 입장하기 →
-                        </a>
-
-                    </div>
+                    <a
+                        href="https://mtplss.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="button button-main ripple"
+                    >
+                        먹튀플러스 커뮤니티 입장하기 →
+                    </a>
 
                 </div>
 
@@ -1213,45 +1175,44 @@
 
         </div>
 
-    </section>
+    </div>
+
+</section>
 
 
-    <!-- 텔레그램 -->
+<section class="telegram-section">
 
-    <section class="telegram-section">
+    <div class="container">
 
-        <div class="container">
+        <div class="telegram-box">
 
-            <div class="telegram-box">
+            <div>
 
-                <div>
+                <h3>
+                    먹튀플러스 공식 텔레그램
+                </h3>
 
-                    <h3>
-                        먹튀플러스 공식 텔레그램
-                    </h3>
-
-                    <p>
-                        문의 및 안내가 필요한 경우
-                        먹튀플러스 공식 텔레그램을 이용하세요.
-                    </p>
-
-                </div>
-
-
-                <a
-                    href="https://t.me/mtplus24"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="button button-dark"
-                >
-                    공식 텔레그램 바로가기
-                </a>
+                <p>
+                    문의 및 안내가 필요한 경우
+                    먹튀플러스 공식 텔레그램을 이용하세요.
+                </p>
 
             </div>
 
+            <a
+                href="https://t.me/mtplus24"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="button button-dark ripple"
+            >
+                공식 텔레그램 바로가기
+            </a>
+
         </div>
 
-    </section>
+    </div>
+
+</section>
 
 
 </main>
@@ -1264,7 +1225,6 @@
         <div>
             © 2026 먹튀플러스. All Rights Reserved.
         </div>
-
 
         <div class="footer-links">
 
@@ -1289,6 +1249,56 @@
     </div>
 
 </footer>
+
+
+<script>
+
+    document.querySelectorAll(".ripple").forEach(function(element) {
+
+        element.addEventListener("click", function(event) {
+
+            const rect =
+                element.getBoundingClientRect();
+
+            const size =
+                Math.max(rect.width, rect.height);
+
+            const ripple =
+                document.createElement("span");
+
+            ripple.className =
+                "ripple-effect";
+
+            ripple.style.width =
+                size + "px";
+
+            ripple.style.height =
+                size + "px";
+
+            ripple.style.left =
+                (event.clientX - rect.left - size / 2) + "px";
+
+            ripple.style.top =
+                (event.clientY - rect.top - size / 2) + "px";
+
+            const oldRipple =
+                element.querySelector(".ripple-effect");
+
+            if (oldRipple) {
+                oldRipple.remove();
+            }
+
+            element.appendChild(ripple);
+
+            setTimeout(function() {
+                ripple.remove();
+            }, 600);
+
+        });
+
+    });
+
+</script>
 
 
 </body>
