@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>먹튀플러스 | 공식 커뮤니티 안내</title>
+
+    <meta name="description" content="먹튀플러스 공식 홍보 페이지입니다. 메인 커뮤니티와 텔레그램 문의 채널로 빠르게 이동할 수 있습니다.">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            background: #0b0c0f;
+            color: #ffffff;
+            font-family: Arial, "Noto Sans KR", sans-serif;
+            line-height: 1.6;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        .container {
+            width: 92%;
+            max-width: 1120px;
+            margin: 0 auto;
+        }
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(11, 12, 15, 0.92);
+            border-bottom: 1px solid #202228;
+            backdrop-filter: blur(12px);
+        }
+
+        .header-inner {
+            min-height: 74px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 24px;
+            font-weight: 900;
+            letter-spacing: -1px;
+        }
+
+        .logo-mark {
+            width: 34px;
+            height: 34px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #8c7bff, #5f56ff);
+            font-size: 17px;
+            font-weight: 900;
+            box-shadow: 0 0 30px rgba(106, 92, 255, 0.25);
+        }
+
+        .logo-text span {
+            color: #8c84ff;
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .header-link {
+            color: #a9acb5;
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .header-button {
+            background: #ffffff;
+            color: #111111;
+            padding: 11px 16px;
+            border-radius: 9px;
+            font-size: 13px;
+            font-weight: 900;
+            transition: 0.2s;
+        }
+
+        .header-button:hover {
+            transform: translateY(-1px);
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            position: relative;
+            overflow: hidden;
+            min-height: 720px;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            width: 520px;
+            height: 520px;
+            border-radius: 50%;
+            background: rgba(112, 91, 255, 0.18);
+            filter: blur(90px);
+            right: -100px;
+            top: 60px;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            width: 350px;
+            height: 350px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.04);
+            filter: blur(80px);
+            left: -100px;
+            bottom: 10px;
+        }
+
+        .hero-inner {
+            position: relative;
+            z-index: 2;
+            padding: 110px 0 90px;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            border: 1px solid #343640;
+            background: rgba(255, 255, 255, 0.03);
+            color: #b8bac5;
+            padding: 8px 13px;
+            border-radius: 999px;
+            font-size: 12px;
+            font-weight: 800;
+            margin-bottom: 22px;
+        }
+
+        .hero-badge-dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: #7e72ff;
+            box-shadow: 0 0 12px rgba(126, 114, 255, 0.9);
+        }
+
+        .hero h1 {
+            margin: 0;
+            font-size: clamp(44px, 7vw, 80px);
+            line-height: 1.05;
+            letter-spacing: -4px;
+            max-width: 900px;
+        }
+
+        .hero h1 span {
+            color: #8d84ff;
+        }
+
+        .hero p {
+            max-width: 680px;
+            margin: 28px 0 0;
+            color: #a2a6b0;
+            font-size: 17px;
+            line-height: 1.85;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 36px;
+        }
+
+        .btn {
+            min-height: 54px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 24px;
+            border-radius: 10px;
+            font-weight: 900;
+            font-size: 14px;
+            transition: 0.2s;
+        }
+
+        .btn-primary {
+            background: #ffffff;
+            color: #111111;
+        }
+
+        .btn-secondary {
+            background: #181a20;
+            color: #ffffff;
+            border: 1px solid #2b2e36;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        /* =========================
+           QUICK BAR
+        ========================= */
+
+        .quick-bar {
+            border-top: 1px solid #202228;
+            border-bottom: 1px solid #202228;
+            background: #0f1014;
+        }
+
+        .quick-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .quick-item {
+            padding: 30px 22px;
+            text-align: center;
+            border-right: 1px solid #202228;
+        }
+
+        .quick-item:last-child {
+            border-right: none;
+        }
+
+        .quick-item strong {
+            display: block;
+            font-size: 19px;
+            margin-bottom: 7px;
+        }
+
+        .quick-item span {
+            color: #777c88;
+            font-size: 13px;
+        }
+
+        /* =========================
+           SECTION COMMON
+        ========================= */
+
+        .section {
+            padding: 100px 0;
+        }
+
+        .section-label {
+            color: #8d84ff;
+            font-size: 13px;
+            font-weight: 900;
+            letter-spacing: 0.5px;
+            margin-bottom: 12px;
+        }
+
+        .section h2 {
+            margin: 0;
+            font-size: clamp(32px, 5vw, 50px);
+            line-height: 1.15;
+            letter-spacing: -2px;
+        }
+
+        .section-description {
+            max-width: 680px;
+            color: #9296a1;
+            margin-top: 20px;
+            line-height: 1.85;
+        }
+
+        /* =========================
+           FEATURES
+        ========================= */
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin-top: 46px;
+        }
+
+        .feature {
+            background: #111318;
+            border: 1px solid #22252d;
+            border-radius: 16px;
+            padding: 30px;
+            min-height: 250px;
+            transition: 0.2s;
+        }
+
+        .feature:hover {
+            transform: translateY(-4px);
+            border-color: #383b46;
+        }
+
+        .feature-number {
+            color: #8d84ff;
+            font-size: 13px;
+            font-weight: 900;
+            margin-bottom: 45px;
+        }
+
+        .feature h3 {
+            margin: 0 0 13px;
+            font-size: 21px;
+        }
+
+        .feature p {
+            margin: 0;
+            color: #888d98;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        /* =========================
+           MAIN COMMUNITY CARD
+        ========================= */
+
+        .community-card {
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, #171923, #25243d);
+            border: 1px solid #303243;
+            border-radius: 20px;
+            padding: 70px 55px;
+        }
+
+        .community-card::after {
+            content: "";
+            position: absolute;
+            width: 320px;
+            height: 320px;
+            border-radius: 50%;
+            background: rgba(126, 108, 255, 0.24);
+            filter: blur(60px);
+            right: -80px;
+            bottom: -140px;
+        }
+
+        .community-content {
+            position: relative;
+            z-index: 2;
+            max-width: 720px;
+        }
+
+        .community-content h2 {
+            margin-bottom: 18px;
+        }
+
+        .community-content p {
+            color: #a8abb8;
+            line-height: 1.8;
+            max-width: 640px;
+        }
+
+        /* =========================
+           TELEGRAM
+        ========================= */
+
+        .telegram-section {
+            padding: 0 0 100px;
+        }
+
+        .telegram-box {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 30px;
+            align-items: center;
+            background: #111318;
+            border: 1px solid #22252d;
+            border-radius: 16px;
+            padding: 36px 38px;
+        }
+
+        .telegram-box h3 {
+            margin: 0 0 8px;
+            font-size: 22px;
+        }
+
+        .telegram-box p {
+            margin: 0;
+            color: #898e98;
+            font-size: 14px;
+        }
+
+        /* =========================
+           CTA
+        ========================= */
+
+        .cta {
+            padding: 0 0 100px;
+        }
+
+        .cta-box {
+            background: #ffffff;
+            color: #111111;
+            border-radius: 20px;
+            padding: 75px 35px;
+            text-align: center;
+        }
+
+        .cta-box h2 {
+            margin: 0;
+            font-size: clamp(32px, 5vw, 50px);
+            letter-spacing: -2px;
+        }
+
+        .cta-box p {
+            margin: 16px auto 30px;
+            max-width: 620px;
+            color: #666666;
+            line-height: 1.8;
+        }
+
+        .cta-box .btn-primary {
+            background: #111111;
+            color: #ffffff;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            border-top: 1px solid #202228;
+            padding: 36px 0;
+            color: #696e78;
+            font-size: 12px;
+        }
+
+        .footer-inner {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 780px) {
+
+            .header-link {
+                display: none;
+            }
+
+            .hero {
+                min-height: auto;
+            }
+
+            .hero-inner {
+                padding: 90px 0 75px;
+            }
+
+            .hero h1 {
+                letter-spacing: -2px;
+            }
+
+            .hero p {
+                font-size: 15px;
+            }
+
+            .hero-buttons {
+                display: grid;
+                grid-template-columns: 1fr;
+            }
+
+            .btn {
+                width: 100%;
+            }
+
+            .quick-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .quick-item {
+                border-right: none;
+                border-bottom: 1px solid #202228;
+            }
+
+            .quick-item:last-child {
+                border-bottom: none;
+            }
+
+            .features {
+                grid-template-columns: 1fr;
+            }
+
+            .feature {
+                min-height: auto;
+            }
+
+            .community-card {
+                padding: 48px 26px;
+            }
+
+            .telegram-box {
+                grid-template-columns: 1fr;
+                padding: 30px 24px;
+            }
+
+            .section {
+                padding: 75px 0;
+            }
+
+            .footer-inner {
+                display: block;
+                text-align: center;
+            }
+
+            .footer-links {
+                justify-content: center;
+                margin-top: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="container header-inner">
+
+        <a href="#" class="logo">
+            <div class="logo-mark">M+</div>
+            <div class="logo-text">
+                먹튀<span>플러스</span>
+            </div>
+        </a>
+
+        <div class="header-actions">
+
+            <a href="https://t.me/mtplus24"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="header-link">
+                텔레그램 문의
+            </a>
+
+            <a href="https://mtplss.com/"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="header-button">
+                커뮤니티 입장
+            </a>
+
+        </div>
+
+    </div>
+</header>
+
+
+<main>
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div class="container hero-inner">
+
+            <div class="hero-badge">
+                <span class="hero-badge-dot"></span>
+                MT PLUS OFFICIAL
+            </div>
+
+            <h1>
+                먹튀검증 커뮤니티<br>
+                <span>먹튀플러스</span>
+            </h1>
+
+            <p>
+                다양한 검증 정보와 커뮤니티 소식을 한곳에서 확인하세요.
+                더 많은 정보와 콘텐츠는 먹튀플러스 메인 커뮤니티에서
+                빠르게 확인할 수 있습니다.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="https://mtplss.com/"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="btn btn-primary">
+                    먹튀플러스 바로가기 →
+                </a>
+
+                <a href="https://t.me/mtplus24"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="btn btn-secondary">
+                    텔레그램 문의
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- QUICK INFO -->
+
+    <section class="quick-bar">
+
+        <div class="container quick-grid">
+
+            <div class="quick-item">
+                <strong>검증 정보</strong>
+                <span>필요한 정보를 빠르게 확인</span>
+            </div>
+
+            <div class="quick-item">
+                <strong>커뮤니티 소식</strong>
+                <span>새로운 공지와 콘텐츠 확인</span>
+            </div>
+
+            <div class="quick-item">
+                <strong>공식 채널</strong>
+                <span>메인 커뮤니티와 텔레그램 연결</span>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FEATURES -->
+
+    <section class="section">
+
+        <div class="container">
+
+            <div class="section-label">
+                WHY MT PLUS
+            </div>
+
+            <h2>
+                필요한 정보는<br>
+                더 간편하게 확인하세요.
+            </h2>
+
+            <p class="section-description">
+                홍보 페이지에서 복잡한 메뉴를 찾을 필요 없이
+                먹튀플러스 메인 커뮤니티와 공식 텔레그램으로
+                빠르게 이동할 수 있도록 구성했습니다.
+            </p>
+
+
+            <div class="features">
+
+                <div class="feature">
+
+                    <div class="feature-number">
+                        01
+                    </div>
+
+                    <h3>
+                        빠른 연결
+                    </h3>
+
+                    <p>
+                        버튼 한 번으로 먹튀플러스 메인 커뮤니티에
+                        바로 접속할 수 있습니다.
+                    </p>
+
+                </div>
+
+
+                <div class="feature">
+
+                    <div class="feature-number">
+                        02
+                    </div>
+
+                    <h3>
+                        다양한 정보
+                    </h3>
+
+                    <p>
+                        메인 커뮤니티에서 검증 정보와 새로운 소식,
+                        다양한 콘텐츠를 확인할 수 있습니다.
+                    </p>
+
+                </div>
+
+
+                <div class="feature">
+
+                    <div class="feature-number">
+                        03
+                    </div>
+
+                    <h3>
+                        공식 문의
+                    </h3>
+
+                    <p>
+                        문의가 필요한 경우 먹튀플러스 공식
+                        텔레그램 채널로 바로 이동할 수 있습니다.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- MAIN COMMUNITY -->
+
+    <section class="section">
+
+        <div class="container">
+
+            <div class="community-card">
+
+                <div class="community-content">
+
+                    <div class="section-label">
+                        MAIN COMMUNITY
+                    </div>
+
+                    <h2>
+                        더 많은 정보는<br>
+                        먹튀플러스에서
+                    </h2>
+
+                    <p>
+                        공지사항과 새로운 소식, 다양한 커뮤니티 콘텐츠는
+                        먹튀플러스 메인 페이지에서 확인할 수 있습니다.
+                    </p>
+
+                    <div class="hero-buttons">
+
+                        <a href="https://mtplss.com/"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="btn btn-primary">
+                            메인 커뮤니티 입장하기 →
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- TELEGRAM -->
+
+    <section class="telegram-section">
+
+        <div class="container">
+
+            <div class="telegram-box">
+
+                <div>
+                    <h3>
+                        먹튀플러스 공식 텔레그램
+                    </h3>
+
+                    <p>
+                        문의 및 안내가 필요한 경우 공식 텔레그램 채널을 이용하세요.
+                    </p>
+                </div>
+
+                <a href="https://t.me/mtplus24"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="btn btn-secondary">
+                    텔레그램 바로가기
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FINAL CTA -->
+
+    <section class="cta">
+
+        <div class="container">
+
+            <div class="cta-box">
+
+                <h2>
+                    먹튀플러스 바로가기
+                </h2>
+
+                <p>
+                    더 많은 정보와 새로운 소식은
+                    먹튀플러스 메인 커뮤니티에서 확인하세요.
+                </p>
+
+                <a href="https://mtplss.com/"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="btn btn-primary">
+                    먹튀플러스 입장하기
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <div class="container footer-inner">
+
+        <div>
+            © 2026 먹튀플러스 MT PLUS. All Rights Reserved.
+        </div>
+
+        <div class="footer-links">
+
+            <a href="https://mtplss.com/"
+               target="_blank"
+               rel="noopener noreferrer">
+                메인 커뮤니티
+            </a>
+
+            <a href="https://t.me/mtplus24"
+               target="_blank"
+               rel="noopener noreferrer">
+                텔레그램
+            </a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+</body>
+</html>
