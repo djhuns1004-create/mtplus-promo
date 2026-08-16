@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://mtplus.site/sitemap.xml
