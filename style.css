@@ -217,3 +217,112 @@ footer{
   .partner-grid{gap:7px}
   .hero h1{font-size:34px}
 }
+
+
+/* =========================
+   QUICK LINKS
+========================= */
+
+.quick-links-section{
+  padding:0 0 8px;
+  background:#050505;
+}
+
+.quick-links-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:14px;
+  transform:translateY(-1px);
+}
+
+.quick-link-card{
+  position:relative;
+  overflow:hidden;
+  min-height:92px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+  padding:22px 24px;
+  background:#0a0a0b;
+  border:1px solid #202024;
+  border-radius:14px;
+  transition:
+    transform .2s ease,
+    background .2s ease,
+    border-color .2s ease,
+    box-shadow .2s ease;
+}
+
+.quick-link-card:hover{
+  transform:translateY(-4px);
+  background:#101012;
+  border-color:#46464d;
+  box-shadow:0 16px 34px rgba(0,0,0,.5);
+}
+
+.quick-link-card:active{
+  transform:scale(.985);
+}
+
+.quick-link-card div{
+  min-width:0;
+}
+
+.quick-link-card strong{
+  display:block;
+  margin-bottom:7px;
+  color:#fff;
+  font-size:17px;
+  font-weight:900;
+  letter-spacing:-.4px;
+}
+
+.quick-link-card span{
+  display:block;
+  color:#8f8f97;
+  font-size:13px;
+  line-height:1.6;
+}
+
+.quick-link-card b{
+  flex:0 0 auto;
+  color:#fff;
+  font-size:13px;
+  font-weight:900;
+  white-space:nowrap;
+  transition:transform .2s ease;
+}
+
+.quick-link-card:hover b{
+  transform:translateX(4px);
+}
+
+@media(max-width:760px){
+  .quick-links-section{
+    padding:0 0 4px;
+  }
+
+  .quick-links-grid{
+    grid-template-columns:1fr;
+    gap:9px;
+  }
+
+  .quick-link-card{
+    min-height:82px;
+    padding:19px 18px;
+    gap:14px;
+  }
+
+  .quick-link-card strong{
+    font-size:16px;
+  }
+
+  .quick-link-card span{
+    font-size:12px;
+  }
+
+  .quick-link-card b{
+    font-size:12px;
+  }
+}
