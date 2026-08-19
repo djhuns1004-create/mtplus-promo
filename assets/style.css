@@ -409,3 +409,48 @@ body{background:
   .info-page-head,.info-page-body{padding:21px}
   .info-page-head h1{font-size:27px}
 }
+
+
+/* ===== V8.4 SEO HERO ===== */
+.v7-hero-box h1{
+  max-width:980px;
+  margin:12px 0 18px!important;
+  font-size:44px!important;
+  line-height:1.16!important;
+  letter-spacing:-1.9px!important;
+}
+.v7-hero-box h1 span{
+  display:inline-block;
+  margin-top:4px;
+}
+.seo-hero-copy{
+  max-width:980px!important;
+  margin:0!important;
+  color:#a8bdca!important;
+  font-size:14px!important;
+  line-height:1.85!important;
+}
+.seo-hero-copy span{
+  display:block;
+}
+.seo-hero-copy span + span{
+  margin-top:2px;
+}
+@media(max-width:900px){
+  .v7-hero-box h1{
+    font-size:35px!important;
+    line-height:1.2!important;
+    letter-spacing:-1.4px!important;
+  }
+}
+@media(max-width:600px){
+  .v7-hero-box h1{
+    font-size:29px!important;
+    line-height:1.24!important;
+    letter-spacing:-1.1px!important;
+  }
+  .seo-hero-copy{
+    font-size:12px!important;
+    line-height:1.75!important;
+  }
+}
