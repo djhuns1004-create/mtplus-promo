@@ -12,3 +12,39 @@
 .article{max-width:900px;margin:auto;padding:38px 0 56px}.article .meta{color:#618092;font-size:11px}.article h1{font-size:34px;letter-spacing:-1.5px;line-height:1.25}.article-body{padding:28px;border:1px solid #14384e;border-radius:14px;background:#07111b;color:#c4d3dc;line-height:1.95;font-size:14px}.article-body h2{color:#fff;margin-top:28px}
 .footer{border-top:1px solid #0d2434;padding:25px 0 38px;color:#577080;font-size:11px}
 @media(max-width:800px){.head-inner{height:auto;padding:14px 0;flex-direction:column;align-items:flex-start}.nav{width:100%;overflow:auto}.hero{padding-top:28px}.hero-box{padding:24px}.hero h1{font-size:31px}.grid{grid-template-columns:1fr}.post{grid-template-columns:70px 1fr}.post .date{grid-column:2}.article h1{font-size:28px}.article-body{padding:20px}}
+
+
+/* ===== 공식 보증업체 ===== */
+.partner-center{padding:6px 0 24px;text-align:center}
+.partner-center .partner-main-btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  min-width:280px;padding:15px 22px;border:1px solid #27cfff;border-radius:10px;
+  background:linear-gradient(90deg,#0b7fbd,#175bd0);color:#fff;font-size:14px;font-weight:900;
+  box-shadow:0 0 18px rgba(0,188,255,.2)
+}
+.partner-center .partner-main-btn:hover{filter:brightness(1.08)}
+.partner-showcase{padding:8px 0 30px}
+.partner-showcase h2{margin:0 0 6px;text-align:center;font-size:24px;letter-spacing:-1px}
+.partner-showcase .sub{margin:0 0 16px;text-align:center;color:#7f9bad;font-size:12px}
+.partner-marquee{
+  position:relative;overflow:hidden;border:1px solid #123d59;border-radius:14px;
+  background:#05101a;padding:12px 0;touch-action:pan-y
+}
+.partner-track{
+  display:flex;gap:12px;width:max-content;padding:0 12px;
+  animation:partnerRoll 48s linear infinite;will-change:transform
+}
+.partner-marquee:hover .partner-track,
+.partner-marquee:focus-within .partner-track,
+.partner-marquee.is-paused .partner-track{animation-play-state:paused}
+.partner-card{
+  flex:0 0 250px;height:90px;border:1px solid #17628a;border-radius:9px;overflow:hidden;
+  background:#071722;box-shadow:0 0 12px rgba(0,166,255,.12)
+}
+.partner-card img{width:100%;height:100%;object-fit:fill}
+@keyframes partnerRoll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media(max-width:800px){
+  .partner-center .partner-main-btn{width:100%;min-width:0}
+  .partner-card{flex-basis:210px;height:76px}
+  .partner-track{gap:10px;animation-duration:42s}
+}
