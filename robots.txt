@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://xn--vl2b35b04l75qf5c.com/sitemap.xml
+Disallow: /*?*
+Sitemap: https://먹튀플러스.com/sitemap.xml
