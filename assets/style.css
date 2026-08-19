@@ -48,3 +48,19 @@
   .partner-card{flex-basis:210px;height:76px}
   .partner-track{gap:10px;animation-duration:42s}
 }
+
+
+/* ===== 전문 콘텐츠 게시글 ===== */
+.article{max-width:900px;margin:34px auto 60px;padding:0 18px}
+.article-head{padding:28px;border:1px solid #153a52;border-radius:14px;background:#06121d}
+.article-cat{display:inline-block;padding:6px 10px;border:1px solid #08bfe8;border-radius:6px;color:#38d9ff;font-size:12px;font-weight:800}
+.article h1{margin:14px 0 10px;font-size:30px;line-height:1.35;letter-spacing:-1.2px}
+.article-desc{color:#9bb2c3;line-height:1.8}
+.article-date{margin-top:14px;color:#66869b;font-size:12px}
+.article-body{margin-top:18px;padding:28px;border:1px solid #102f43;border-radius:14px;background:#030b12}
+.article-body h2{margin:30px 0 10px;color:#fff;font-size:20px}
+.article-body h2:first-child{margin-top:0}
+.article-body p{margin:0;color:#b9cad5;font-size:15px;line-height:1.95}
+.article-note{margin-top:24px;padding:15px;border-left:3px solid #18c9f5;background:#071724;color:#91b3c7;font-size:13px;line-height:1.7}
+.article-back{display:inline-block;margin-top:20px;padding:11px 16px;border:1px solid #1b536f;border-radius:8px;color:#50d7ff;text-decoration:none}
+@media(max-width:700px){.article h1{font-size:24px}.article-head,.article-body{padding:20px}}
