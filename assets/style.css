@@ -330,3 +330,82 @@ body{background:
  .trust-grid{grid-template-columns:1fr}
  .feed-head{align-items:flex-start}
 }
+
+
+/* =========================
+   V8 INFO HUB
+========================= */
+.feed-item{grid-template-columns:92px minmax(0,1fr) 24px!important}
+.feed-no{
+  display:inline-flex!important;align-items:center!important;justify-content:flex-start!important;
+  width:auto!important;font-size:10px!important;font-weight:950!important;white-space:nowrap!important;
+  letter-spacing:-.2px
+}
+.verify .feed-no{color:#ff667b!important}
+.partner .feed-no{color:#ffd064!important}
+
+.info-hub-section{padding:6px 0 52px}
+.info-hub-head{margin-bottom:16px}
+.info-hub-head>span{color:#6bdcff;font-size:9px;font-weight:950;letter-spacing:1.5px}
+.info-hub-head h2{margin:7px 0 6px;font-size:23px;letter-spacing:-.8px}
+.info-hub-head p{margin:0;color:#7893a5;font-size:11px}
+
+.info-hub-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}
+.info-hub-card{
+  position:relative;display:grid;grid-template-columns:54px minmax(0,1fr);gap:14px;
+  min-height:180px;padding:21px;border-radius:15px;background:#07111a;
+  border:1px solid #173247;overflow:hidden;transition:.18s ease
+}
+.info-hub-card:before{
+  content:"";position:absolute;inset:0;pointer-events:none;opacity:.85
+}
+.about-card{border-color:rgba(47,198,255,.35)}
+.about-card:before{background:radial-gradient(circle at 92% 10%,rgba(47,198,255,.10),transparent 36%)}
+.guarantee-card{border-color:rgba(255,198,74,.34)}
+.guarantee-card:before{background:radial-gradient(circle at 92% 10%,rgba(255,198,74,.09),transparent 36%)}
+.safety-card{border-color:rgba(157,123,255,.34)}
+.safety-card:before{background:radial-gradient(circle at 92% 10%,rgba(157,123,255,.09),transparent 36%)}
+.info-hub-card:hover{transform:translateY(-2px);background:#08151f}
+.info-icon{
+  position:relative;z-index:1;width:48px;height:48px;display:grid;place-items:center;border-radius:12px;
+  background:#0a1c29;border:1px solid #21455d;font-size:14px;font-weight:950;color:#fff
+}
+.about-card .info-icon{color:#6ee4ff;border-color:#1d708d}
+.guarantee-card .info-icon{color:#ffd36e;border-color:#80621e}
+.safety-card .info-icon{color:#bca8ff;border-color:#5b4897}
+.info-hub-card>div{position:relative;z-index:1;min-width:0}
+.info-hub-card small{display:block;font-size:8px;font-weight:950;letter-spacing:1.2px;color:#607e91}
+.info-hub-card h3{margin:7px 0 8px;font-size:18px;color:#fff}
+.info-hub-card p{margin:0;color:#84a0b1;font-size:11px;line-height:1.75}
+.info-hub-card b{display:block;margin-top:14px;font-size:10px}
+.about-card b{color:#57dcff}.guarantee-card b{color:#ffd16a}.safety-card b{color:#b9a7ff}
+
+/* detail information pages */
+.info-page{max-width:940px;margin:0 auto;padding:46px 18px 65px}
+.info-page-head{
+  padding:30px;border:1px solid #18405a;border-radius:16px;
+  background:linear-gradient(135deg,#07141e,#091927)
+}
+.info-page-head .label{font-size:9px;font-weight:950;letter-spacing:1.4px;color:#62dcff}
+.info-page-head h1{margin:10px 0 10px;font-size:33px;letter-spacing:-1.3px;line-height:1.25}
+.info-page-head p{margin:0;color:#91a9b8;font-size:13px;line-height:1.85}
+.info-page-body{
+  margin-top:18px;padding:29px;border:1px solid #112f43;border-radius:15px;background:#061019
+}
+.info-page-body h2{margin:30px 0 10px;font-size:20px;color:#fff}
+.info-page-body h2:first-child{margin-top:0}
+.info-page-body p{margin:0;color:#b6c8d3;font-size:14px;line-height:1.95}
+.info-page-body ul{margin:9px 0 0;padding-left:20px;color:#a9bdc9;line-height:1.9;font-size:14px}
+.info-callout{
+  margin-top:24px;padding:17px 18px;border-left:3px solid #28cfff;border-radius:8px;background:#081a26;
+  color:#91aebb;font-size:13px;line-height:1.8
+}
+.info-actions{display:flex;gap:9px;margin-top:22px;flex-wrap:wrap}
+.info-actions a{padding:11px 15px;border:1px solid #20506c;border-radius:8px;background:#081823;font-size:11px;font-weight:900}
+@media(max-width:850px){
+  .feed-item{grid-template-columns:82px minmax(0,1fr) 20px!important}
+  .info-hub-grid{grid-template-columns:1fr}
+  .info-hub-card{min-height:0}
+  .info-page-head,.info-page-body{padding:21px}
+  .info-page-head h1{font-size:27px}
+}

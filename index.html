@@ -7,7 +7,7 @@
 <meta name="description" content="먹튀플러스 먹튀검증, 먹튀신고, 공식 보증업체 정보를 한곳에서 확인할 수 있는 콘텐츠 허브입니다.">
 <link rel="canonical" href="https://먹튀플러스.com/">
 <meta name="robots" content="index,follow,max-image-preview:large">
-<link rel="stylesheet" href="/assets/style.css?v=7.0">
+<link rel="stylesheet" href="/assets/style.css?v=8.0">
 </head>
 <body>
 
@@ -110,13 +110,49 @@
   </div>
 </section>
 
-<section class="trust-strip">
-  <div class="wrap trust-grid">
-    <div><b>먹튀검증</b><span>실제 신고 게시글 중심</span></div>
-    <div><b>공식 보증업체</b><span>상세페이지 직접 연결</span></div>
-    <div><b>배너문의</b><span>Telegram @mtplus24</span></div>
+
+<section class="info-hub-section">
+  <div class="wrap">
+    <div class="info-hub-head">
+      <span>MTPLUS INFORMATION</span>
+      <h2>먹튀플러스 이용 정보</h2>
+      <p>커뮤니티 운영 기준과 공식 보증업체, 안전 이용 정보를 확인할 수 있습니다.</p>
+    </div>
+
+    <div class="info-hub-grid">
+      <a class="info-hub-card about-card" href="/about/">
+        <span class="info-icon">M+</span>
+        <div>
+          <small>ABOUT MTPLUS</small>
+          <h3>먹튀플러스 소개</h3>
+          <p>먹튀검증과 피해 제보를 중심으로 운영되는 먹튀플러스의 정보 제공 기준과 커뮤니티 운영 방향을 안내합니다.</p>
+          <b>자세히 보기 →</b>
+        </div>
+      </a>
+
+      <a class="info-hub-card guarantee-card" href="/partner-guide/">
+        <span class="info-icon">G</span>
+        <div>
+          <small>GUARANTEE GUIDE</small>
+          <h3>공식 보증업체 안내</h3>
+          <p>먹튀플러스와 협의된 보증금을 예치하고 검증 절차를 거쳐 안내되는 공식 보증업체 운영 기준을 확인합니다.</p>
+          <b>보증업체 안내 보기 →</b>
+        </div>
+      </a>
+
+      <a class="info-hub-card safety-card" href="/safety-guide/">
+        <span class="info-icon">S</span>
+        <div>
+          <small>SAFETY INFORMATION</small>
+          <h3>안전 이용 정보</h3>
+          <p>사이트 이용 전 확인해야 할 도메인, 이용 조건, 출금 규정, 피해 제보 확인 등 기본 안전 정보를 정리했습니다.</p>
+          <b>안전정보 확인 →</b>
+        </div>
+      </a>
+    </div>
   </div>
 </section>
+
 </main>
 
 <footer class="footer v7-footer">
@@ -133,9 +169,9 @@
       el.innerHTML = '<div class="feed-empty">등록된 콘텐츠가 없습니다.</div>';
       return;
     }
-    el.innerHTML = items.slice(0,8).map((x,i) => `
+    el.innerHTML = items.slice(0,8).map((x) => `
       <a class="feed-item ${type}" href="${esc(x.url)}" target="_blank" rel="noopener">
-        <span class="feed-no">${String(i+1).padStart(2,'0')}</span>
+        <span class="feed-no">${type === 'verify' ? '[먹튀신고]' : '[보증업체]'}</span>
         <span class="feed-title">${esc(x.title)}</span>
         <span class="feed-arrow">↗</span>
       </a>
