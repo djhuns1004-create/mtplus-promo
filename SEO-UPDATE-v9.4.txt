@@ -1,0 +1,10 @@
+먹튀플러스 V9.4 SEO 업데이트
+
+- 메인/카테고리/소개 페이지 title·description을 검색 의도별로 분리
+- 메인 WebSite + Organization 구조화 데이터 보강
+- 카테고리 CollectionPage 구조화 데이터 추가
+- OG/Twitter 메타데이터 보강
+- 배너와 기존 링크/디자인 유지
+- 내부 콘텐츠/카테고리 구조 유지
+- meta keywords는 Google 검색 순위에 사용되지 않아 추가하지 않음
+- 키워드 반복 삽입 대신 제목/H1/본문/내부링크의 주제 일치도를 강화
