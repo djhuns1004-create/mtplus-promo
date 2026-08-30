@@ -1,0 +1,17 @@
+먹튀플러스.com SEO 구조 정리 v10.0 (2026-08-30)
+
+- 메인 상단 먹튀검증/보증업체 링크를 외부 커뮤니티가 아닌 자체 카테고리 허브로 통일
+- 주요 v7 네비게이션에 먹튀플러스 소개(/about/) 추가
+- 메인에 주요 섹션 ItemList 구조화 데이터 추가
+- 중복 /partners/, /guide/ 페이지는 대표 카테고리 canonical + noindex,follow 처리
+- /join-money/, /bonus/ canonical을 먹튀플러스.com으로 통일하고 breadcrumb 구조화 데이터 추가
+- sitemap.xml을 핵심 허브 우선 구조로 재작성하고 2026-08-30 lastmod 갱신
+- 기존 디자인/CSS/배너/콘텐츠는 변경하지 않음
+
+대표 SEO 허브
+/
+/category/verification.html
+/category/partners.html
+/category/guide.html
+/category/community.html
+/about/
