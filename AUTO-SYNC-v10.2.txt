@@ -1,0 +1,14 @@
+먹튀플러스 홍보페이지 v10.2 자동 동기화
+
+추가 기능
+- GitHub Actions가 1시간마다 scripts/sync_content.py 실행
+- mtplss.com의 최신 먹튀신고/공식 보증업체를 data/feed.json에 반영
+- 변경된 feed.json을 GitHub에 자동 커밋/푸시
+- Actions > Sync Content > Run workflow에서 수동 실행 가능
+
+최초 1회 확인
+GitHub > Settings > Actions > General > Workflow permissions에서
+Read and write permissions를 선택하고 저장하세요.
+
+참고
+GitHub의 schedule 실행은 정확히 매시 정각을 보장하지 않으며 지연될 수 있습니다.
