@@ -16,7 +16,8 @@ SOURCES = {
 }
 
 HEADERS = {
-    "User-Agent": "Mozilla/5.0 (compatible; MTPlusPromoSync/1.0; +https://먹튀플러스.com/)"
+    "User-Agent": "Mozilla/5.0 (compatible; MTPlusPromoSync/1.1; +https://mtplss.com/)",
+    "Accept-Language": "ko-KR,ko;q=0.9,en;q=0.8"
 }
 
 def clean_title(text: str) -> str:
@@ -31,7 +32,9 @@ def slug_title(href: str) -> str:
 def get_soup(url: str) -> BeautifulSoup:
     r = requests.get(url, headers=HEADERS, timeout=25)
     r.raise_for_status()
-    return BeautifulSoup(r.text, "html.parser")
+    # requests가 잘못 추정한 latin-1 때문에 한글이 깨지는 것을 방지한다.
+    # HTML 원본 바이트를 BeautifulSoup에 넘기면 meta/header를 기준으로 인코딩을 판별한다.
+    return BeautifulSoup(r.content, "html.parser")
 
 def verification_items(soup: BeautifulSoup):
     found, seen = [], set()
