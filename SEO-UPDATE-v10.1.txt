@@ -1,0 +1,28 @@
+먹튀플러스 홍보페이지 SEO UPDATE v10.1
+업데이트: 2026-09-22
+
+목적
+- 먹튀플러스.com 자체의 브랜드 엔티티 신호를 더 명확하게 정리
+- 기존 디자인/기능/배너/콘텐츠 유지
+
+변경 사항
+1. 메인 WebSite 구조화 데이터에 고유 @id 추가
+2. Organization 구조화 데이터에 고유 @id 추가
+3. WebSite publisher를 먹튀플러스.com Organization으로 연결
+4. Organization sameAs에서 mtplss.com 제거
+   - 별도 도메인을 동일 엔티티로 과도하게 묶는 신호를 줄임
+   - 텔레그램 공식 문의 채널은 sameAs 유지
+5. 메인/소개 페이지 홈 브랜드 링크 접근성 라벨 강화
+6. 소개 페이지의 메인 복귀 링크 앵커를 '먹튀플러스 메인으로'로 명확화
+7. 실제 수정된 메인/소개 URL의 sitemap lastmod를 2026-09-22로 갱신
+
+유지 사항
+- title / meta description / canonical / H1 유지
+- robots.txt 유지
+- 기존 mtplss.com 콘텐츠 링크와 배너 링크 유지
+- 디자인/CSS/JS 변경 없음
+
+배포 후 권장
+- Search Console URL 검사에서 https://먹튀플러스.com/ 색인 생성 요청 1회
+- sitemap.xml 재제출은 선택 사항
+- 이후 실적에서 검색어 '먹튀플러스' 노출 여부를 관찰
