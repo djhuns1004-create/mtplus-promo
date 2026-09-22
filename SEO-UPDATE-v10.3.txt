@@ -1,0 +1,10 @@
+SEO UPDATE v10.3 (2026-09-22)
+
+- 메인 title을 브랜드 중심으로 정리
+- 메인 meta description을 검색 결과용으로 간결하게 조정
+- OG/Twitter 제목·설명 동기화
+- 메인 WebPage 구조화 데이터 추가
+- 핵심 카테고리 및 소개 페이지 BreadcrumbList 구조화 데이터 추가
+- /guide/, /partners/ 레거시 중복 경로에 noindex,follow 추가
+- 기존 canonical, sitemap, robots, 자동 콘텐츠 동기화 기능 유지
+- 과도한 키워드 반복은 추가하지 않음
