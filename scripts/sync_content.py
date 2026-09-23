@@ -8,15 +8,15 @@ from bs4 import BeautifulSoup
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "data" / "feed.json"
-BASE = "https://mtplss.com"
+BASE = "https://mtplus365.com"
 
 SOURCES = {
-    "verification": "https://mtplss.com/posts/%EB%A8%B9%ED%8A%80%EC%8B%A0%EA%B3%A0",
-    "partners": "https://mtplss.com/posts/%EB%B3%B4%EC%A6%9D%EC%97%85%EC%B2%B4",
+    "verification": "https://mtplus365.com/posts/%EB%A8%B9%ED%8A%80%EC%8B%A0%EA%B3%A0",
+    "partners": "https://mtplus365.com/posts/%EB%B3%B4%EC%A6%9D%EC%97%85%EC%B2%B4",
 }
 
 HEADERS = {
-    "User-Agent": "Mozilla/5.0 (compatible; MTPlusPromoSync/1.1; +https://mtplss.com/)",
+    "User-Agent": "Mozilla/5.0 (compatible; MTPlusPromoSync/1.1; +https://mtplus365.com/)",
     "Accept-Language": "ko-KR,ko;q=0.9,en;q=0.8"
 }
 

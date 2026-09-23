@@ -9,7 +9,7 @@
 1. 메인 WebSite 구조화 데이터에 고유 @id 추가
 2. Organization 구조화 데이터에 고유 @id 추가
 3. WebSite publisher를 먹튀플러스.com Organization으로 연결
-4. Organization sameAs에서 mtplss.com 제거
+4. Organization sameAs에서 mtplus365.com 제거
    - 별도 도메인을 동일 엔티티로 과도하게 묶는 신호를 줄임
    - 텔레그램 공식 문의 채널은 sameAs 유지
 5. 메인/소개 페이지 홈 브랜드 링크 접근성 라벨 강화
@@ -19,7 +19,7 @@
 유지 사항
 - title / meta description / canonical / H1 유지
 - robots.txt 유지
-- 기존 mtplss.com 콘텐츠 링크와 배너 링크 유지
+- 기존 mtplus365.com 콘텐츠 링크와 배너 링크 유지
 - 디자인/CSS/JS 변경 없음
 
 배포 후 권장
