@@ -63,11 +63,16 @@ def verification_items(soup: BeautifulSoup):
     return found
 
 def partner_items(soup: BeautifulSoup):
+    """Collect partner posts from either current or legacy board routes."""
     found, seen = [], set()
     for a in soup.find_all("a", href=True):
         href = urljoin(BASE, a["href"])
-        decoded = unquote(urlparse(href).path)
-        if "/posts/보증업체/" not in decoded:
+        parsed = urlparse(href)
+        if parsed.netloc not in {"mtplus365.com", "www.mtplus365.com"}:
+            continue
+        path = unquote(parsed.path).rstrip("/")
+        match = re.match(r"^/(?:posts/)?보증업체/([^/]+)$", path)
+        if not match:
             continue
         if href in seen:
             continue
@@ -83,6 +88,22 @@ def partner_items(soup: BeautifulSoup):
             break
     return found
 
+
+def sync_partners(previous):
+    # Prefer the actual public board route. Fall back to the legacy route only
+    # when the first source fails or contains no recognized partner links.
+    sources = ["https://mtplus365.com/보증업체", SOURCES["partners"]]
+    for source in sources:
+        try:
+            items = partner_items(get_soup(source))
+            print(f"partners source={source} count={len(items)}")
+            if items:
+                return items
+        except Exception as exc:
+            print(f"partners source failed ({source}): {exc}")
+    print("WARNING: no partner posts collected; retaining previous entries")
+    return previous
+
 def main():
     previous = {}
     if OUT.exists():
@@ -96,10 +117,7 @@ def main():
         data["verification"] = verification_items(get_soup(SOURCES["verification"])) or previous.get("verification", [])
     except Exception as e:
         print("verification sync failed:", e)
-    try:
-        data["partners"] = partner_items(get_soup(SOURCES["partners"])) or previous.get("partners", [])
-    except Exception as e:
-        print("partners sync failed:", e)
+    data["partners"] = sync_partners(previous.get("partners", []))
 
     kst = timezone(timedelta(hours=9))
     data["updatedAt"] = datetime.now(kst).isoformat(timespec="seconds")
