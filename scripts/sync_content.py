@@ -89,6 +89,12 @@ def partner_items(soup: BeautifulSoup):
     return found
 
 
+def exclude_removed_partners(items):
+    # Explicitly excluded from the official partner feed.
+    # Keep this exclusion on every scheduled sync, including fallback data.
+    return [item for item in items if "하이카지노" not in (item.get("title", "") + " " + unquote(item.get("url", "")))]
+
+
 def sync_partners(previous):
     # Prefer the actual public board route. Fall back to the legacy route only
     # when the first source fails or contains no recognized partner links.
@@ -98,11 +104,11 @@ def sync_partners(previous):
             items = partner_items(get_soup(source))
             print(f"partners source={source} count={len(items)}")
             if items:
-                return items
+                return exclude_removed_partners(items)
         except Exception as exc:
             print(f"partners source failed ({source}): {exc}")
     print("WARNING: no partner posts collected; retaining previous entries")
-    return previous
+    return exclude_removed_partners(previous)
 
 def main():
     previous = {}
@@ -117,7 +123,7 @@ def main():
         data["verification"] = verification_items(get_soup(SOURCES["verification"])) or previous.get("verification", [])
     except Exception as e:
         print("verification sync failed:", e)
-    data["partners"] = sync_partners(previous.get("partners", []))
+    data["partners"] = exclude_removed_partners(sync_partners(previous.get("partners", [])))
 
     kst = timezone(timedelta(hours=9))
     data["updatedAt"] = datetime.now(kst).isoformat(timespec="seconds")
