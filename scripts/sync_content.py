@@ -92,7 +92,7 @@ def partner_items(soup: BeautifulSoup):
 def exclude_removed_partners(items):
     # Explicitly excluded from the official partner feed.
     # Keep this exclusion on every scheduled sync, including fallback data.
-    return [item for item in items if "하이카지노" not in (item.get("title", "") + " " + unquote(item.get("url", "")))]
+    return [item for item in items if not any(name in (item.get("title", "") + " " + unquote(item.get("url", ""))) for name in ("하이카지노", "꿀벌", "옐로우벳", "옐러우벳"))]
 
 
 def sync_partners(previous):
